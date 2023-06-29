@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --account=def-browna
 #SBATCH --mail-type=all
-#SBATCH --mail-user=nking1@ualberta.ca
+#SBATCH --mail-user=
 #SBATCH --ntasks=1
 #SBATCH --time=1:0
 #SBATCH --output=initialization.out
