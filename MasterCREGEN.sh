@@ -6,7 +6,7 @@
 #SBATCH -N 1
 #SBATCH --mem-per-cpu=2G
 #SBATCH --time=1:0:0
-#SBATCH --output=CREGEN.sh
+#SBATCH --output=CREGEN.out
 
 mkdir CREGEN
 for ens in Cycle?/?Screen/crest_ensemble.xyz
