@@ -14,4 +14,4 @@ export OMP_STACKSIZE=Stacksize
 DIR=$(sed -n "${SLURM_ARRAY_TASK_ID}p" mtd.dir) 
 cd $DIR 
 echo "Starting task $SLURM_ARRAY_TASK_ID in dir $DIR" 
-xtb basename.xyz --md --input basename.inp -P 4 -g Solvent > basename.out
+xtb basename.xyz --md --input basename.inp -P 4 -g Solvent --chrg CHARGE > basename.out
