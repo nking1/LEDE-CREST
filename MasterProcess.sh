@@ -42,8 +42,9 @@ for d in ?Screen/
 
 # Set up variables for energies
 
- AtomCount=$(head -1 A1/basename.xyz)
- LinesPerMol=$(echo "$AtomCount + 2" | bc -l)
+ dos2unix A1/basename.xyz
+ AtomCount=$(sed -n '1p' A1/basename.xyz)
+ LinesPerMol=$(echo 2+$AtomCount | bc -l)
 
 # Get energies
 # i.e. get each:  2nd line for every structure in the ensemble.xyz file
