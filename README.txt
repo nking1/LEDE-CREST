@@ -41,6 +41,8 @@ email - Your email address for notifications (optional).
 
 Solvent - Select a solvent name for gbsa solvation. If none is desired, enter "none".
 
+CHARGE - electronic charge of system. Default is 0, but may be adjusted if desired.
+
 KPush1 - Default is 0.05, but may be adjusted if desired.
 
 KPush2 - Default is 0.015, but may be adjusted if desired.
