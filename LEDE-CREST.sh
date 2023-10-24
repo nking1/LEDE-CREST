@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=def-browna
+#SBATCH --account=
 #SBATCH --mail-type=all
 #SBATCH --mail-user=
 #SBATCH --ntasks=1
