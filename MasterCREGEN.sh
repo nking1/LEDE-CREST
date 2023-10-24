@@ -16,6 +16,6 @@ cp Cycle1/A1/basename.xyz CREGEN
 module load StdEnv/2020 crest/2.12
 export OMPSTACKSIZE=Stacksize
 cd CREGEN
-crest basename.xyz --cregen ensembles.xyz --notopo -g Solvent -T 16
+crest basename.xyz --cregen ensembles.xyz --notopo -g Solvent -T 16 --chrg CHARGE
 cp crest_ensemble.xyz ../final_ensemble.xyz
 cp crest_best.xyz ../LEDE-CREST_best.xyz
