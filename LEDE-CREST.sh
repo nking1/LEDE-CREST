@@ -10,6 +10,7 @@ basename=
 account=
 email=
 Solvent=
+CHARGE=0
 KPush1=0.05
 KPush2=0.015
 Alp1=1.3
@@ -30,10 +31,10 @@ MaxCycles=10
 #Set up scripts
 
 sed "s/basename/$basename/g; s/ACCT/$account/g; s/EMAIL/$email/g; s/Solvent/$Solvent/g; s/MaxCycles/$MaxCycles/g" MasterNextCycle.sh > TemplateNextCycle.sh
-sed "s/basename/$basename/g; s/ACCT/$account/g; s/EMAIL/$email/g; s/MTDTasks/$MTDTasks/g; s/MTDMem/$MTDMem/g; s/MTDTime/$MTDTime/g; s/Stacksize/$Stacksize/g; s/Solvent/$Solvent/g" MasterMTD.sh > TemplateMTD.sh
-sed "s/basename/$basename/g; s/ACCT/$account/g; s/EMAIL/$email/g; s/Solvent/$Solvent/g; s/Stacksize/$Stacksize/g; s/ScreenTasks/$ScreenTasks/g; s/ScreenMem/$ScreenMem/g; s/ScreenTime/$ScreenTime/g" MasterScreen.sh > TemplateScreen.sh
+sed "s/basename/$basename/g; s/ACCT/$account/g; s/EMAIL/$email/g; s/MTDTasks/$MTDTasks/g; s/MTDMem/$MTDMem/g; s/MTDTime/$MTDTime/g; s/Stacksize/$Stacksize/g; s/Solvent/$Solvent/g; s/CHARGE/$CHARGE/g" MasterMTD.sh > TemplateMTD.sh
+sed "s/basename/$basename/g; s/ACCT/$account/g; s/EMAIL/$email/g; s/Solvent/$Solvent/g; s/Stacksize/$Stacksize/g; s/ScreenTasks/$ScreenTasks/g; s/ScreenMem/$ScreenMem/g; s/ScreenTime/$ScreenTime/g; s/CHARGE/$CHARGE/g" MasterScreen.sh > TemplateScreen.sh
 sed "s/basename/$basename/g; s/ACCT/$account/g; s/EMAIL/$email/g; s/MaxConfCount/$MaxConfCount/g; s/PassQuotient/$PassQuotient/g; s/MinRMSD/$MinRMSD/g" MasterProcess.sh > TemplateProcess.sh
-sed "s/basename/$basename/g; s/ACCT/$account/g; s/EMAIL/$email/g; s/Stacksize/$Stacksize/g; s/Solvent/$Solvent/g" MasterCREGEN.sh > CREGEN.sh
+sed "s/basename/$basename/g; s/ACCT/$account/g; s/EMAIL/$email/g; s/Stacksize/$Stacksize/g; s/Solvent/$Solvent/g; s/CHARGE/$CHARGE/g" MasterCREGEN.sh > CREGEN.sh
 
 #Make initial Cycle directory
 
