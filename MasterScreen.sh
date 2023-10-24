@@ -17,4 +17,4 @@ export OMP_STACKSIZE=Stacksize
 for n in {1..4}
  do cat ../${DIR::1}$n/xtb.trj >> xtb.trj
  done
-crest -screen xtb.trj -T 28 -g Solvent > basename.out
+crest -screen xtb.trj -T 28 -g Solvent --chrg CHARGE > basename.out
