@@ -17,7 +17,7 @@ echo Starting task $SLURM_ARRAY_TASK_ID in dir $DIR
 rm xtb.trj
 export OMP_STACKSIZE=Stacksize
 for n in {1..4}
- do echo -e "\n" >> ${DIR::1}$n/xtb.trj
+ do echo -e "\n" >> ../${DIR::1}$n/xtb.trj
  Lines=$(wc -l ../${DIR::1}$n/xtb.trj | awk '{print $1}')
  Rem=$(echo "($Lines % $LinesPerMol)" | bc)
  head -n -$Rem ../${DIR::1}$n/xtb.trj >> xtb.trj
