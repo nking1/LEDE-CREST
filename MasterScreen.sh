@@ -19,7 +19,7 @@ export OMP_STACKSIZE=Stacksize
 for n in {1..4}
  do echo -e "\n" >> ${DIR::1}$n/xtb.trj
  Lines=$(wc -l ../${DIR::1}$n/xtb.trj | awk '{print $1}')
- Rem=$(echo "($Lines % $LinesPerMol) + 1" | bc)
+ Rem=$(echo "($Lines % $LinesPerMol)" | bc)
  head -n -$Rem ../${DIR::1}$n/xtb.trj >> xtb.trj
  done
 crest -screen xtb.trj -T 28 -g Solvent --chrg CHARGE > basename.out
