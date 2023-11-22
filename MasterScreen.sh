@@ -10,6 +10,7 @@
 #SBATCH --output=basenameScreen.out
 
 module load StdEnv/2020 crest/2.12 
+dos2unix AScreen/basename.xyz
 LinesPerMol=$(echo 2+$(sed -n '1p' AScreen/basename.xyz) | bc -l)
 DIR=$(sed -n "${SLURM_ARRAY_TASK_ID}p" screen.dir) 
 cd $DIR 
